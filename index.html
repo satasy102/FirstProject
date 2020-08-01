@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <title>Tin tức Liên Minh Huyền Thoại</title>
+</head>
+
+<body>
+    <div id="input" class="input">
+        <form action="./index.html" method="GET" onsubmit="return result(this.emailbox.value)"
+            oninput="return result(this.emailbox.value)">
+            <button class="close" onclick="closeX()">X</button>
+            <p>Nhập email để nhận cập nhật thông tin khuyến mãi sớm nhất</p>
+            <input class="email" id="email" type="text" name="emailbox" value="" placeholder="Email Address" />
+            <button class=" button" type="submit" value="Submit" onclick="return result(this.emailbox.value)">Đăng
+                ký</button><br>
+            <div id="circle"></div>
+            <div id="check"></div>
+        </form>
+    </div>
+    <header class="header clearfix">
+        <h1 class="logo-left">
+            <a href="./index.html">
+                <img src="http://lienminh360.vn/wp-content/themes/_gameplay/images/logo.png" alt="">
+            </a>
+        </h1>
+        <div id="div-right">
+            <div class="widget-title black">
+                <span>FOLLOW US</span>
+            </div>
+            <div class="f-icon">
+                <a href="https://twitter.com/lienminh360" target="_blank">
+                    <div class="icon t">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </div>
+                </a>
+                <div class="icon g" onclick="mail()">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                </div>
+                <a href="https://www.facebook.com/LienMinh360VN" target="_blank">
+                    <div class="icon f">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+    <section class="wrapper">
+        <div class="top-nav">
+            <div class="wsmenucontent overlapblackbg"></div>
+            <div class="manumain">
+                <a id="navToggle" class="animated-arrow slideLeft" onclick="showMenu()">
+                    <span></span>
+                </a>
+                <a href="/">
+                    <span class="logo">
+                        <img src="http://lienminh360.vn/wp-content/themes/_gameplay/images/logo-footer.png">
+                    </span>
+                </a>
+            </div>
+            <nav class="wsmenu slideLeft menuclose" id="nav">
+                <button class="close" onclick="closeMenu()">X</button>
+                <div class="search-social">
+                    <form class="searchbox" method="get" id="searchforms" action="http://lienminh360.vn/">
+                        <input type="submit" value="" class="searchbtn">
+                        <input type="text" placeholder="Tìm kiếm" value="" class="searchtxt" name="s" id="s">
+                        <i class="fa fa-search"></i>
+                    </form>
+                </div>
+                <div class="menu-main-menu-container">
+                    <ul id="menu-main-menu-1" class="menus menu-primary">
+                        <li>
+                            <a href="http://lienminh360.vn" style="color: red;">Trang chủ</a></li>
+                        <li>
+                            <a href="http://lienminh360.vn/tin-game/" style="color: yellow;">Tin Game</a>
+                            <ul class="sub-menu">
+                                <div class="transparent"></div>
+                                <div class="inner">
+                                    <li>
+                                        <a href="http://lienminh360.vn/tin-game/phan-tich/">Phân tích</a></li>
+                                    <li>
+                                        <a href="http://lienminh360.vn/tin-game/xu-huong/">Xu hướng</a></li>
+                                    <li>
+                                        <a href="http://lienminh360.vn/tin-game/pbe/">PBE</a></li>
+                                    <li>
+                                        <a href="http://lienminh360.vn/tin-game/phat-trien/">Phát triển</a></li>
+                                </div>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="http://lienminh360.vn/esports/" style="color: yellow;">Tin Esports</a>
+                            <ul class="sub-menu">
+                                <div class="transparent"></div>
+                                <div class="inner">
+                                    <li>
+                                        <a href="http://lienminh360.vn/esports/lich-thi-dau/">Lịch thi đấu</a></li>
+                                    <li>
+                                        <a href="http://lienminh360.vn/esports/giai-trong-nuoc/">VCS</a></li>
+                                    <li>
+                                        <a href="http://lienminh360.vn/esports/quoc-te/">Quốc tế</a></li>
+                                    <li>
+                                        <a href="http://lienminh360.vn/esports/lcs-lec/">LCS / LEC</a></li>
+                                    <li>
+                                        <a href="http://lienminh360.vn/esports/lck-lpl/">LCK/LPL</a></li>
+                                    <li>
+                                        <a href="http://lienminh360.vn/esports/others/">Khu vực khác</a></li>
+                                </div>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="http://lienminh360.vn/cam-nang/" style="color: yellow;">Cẩm Nang</a>
+                            <ul class="sub-menu">
+                                <div class="transparent"></div>
+                                <div class="inner">
+                                    <li><a href="http://lienminh360.vn/cam-nang/chien-thuat/">Chiến Thuật</a></li>
+                                    <li><a href="http://lienminh360.vn/cam-nang/co-che-hoat-dong/">Cơ Chế Hoạt Động</a>
+                                    </li>
+                                    <li><a href="http://lienminh360.vn/cam-nang/tuong/">Tướng</a></li>
+                                    <li><a href="http://lienminh360.vn/cam-nang/khac/">Khác</a></li>
+                                </div>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="http://lienminh360.vn/cong-dong/" style="color: yellow;">Cộng Đồng</a>
+                            <ul class="sub-menu">
+                                <div class="transparent"></div>
+                                <div class="inner">
+                                    <li>
+                                        <a href="http://lienminh360.vn/cong-dong/stream/">Stream</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://lienminh360.vn/cong-dong/gear/">Gear</a>
+                                    </li>
+                                </div>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="http://lienminh360.vn/video/" style="color: yellow;">Video</a>
+                            <ul class="sub-menu">
+                                <div class="transparent"></div>
+                                <div class="inner">
+                                    <li><a href="http://lienminh360.vn/video/highlights-giai-dau/">Highlights Giải
+                                            Đấu</a>
+                                    </li>
+                                    <li><a href="http://lienminh360.vn/video/hai-huoc/">Hài Hước</a></li>
+                                    <li><a href="http://lienminh360.vn/video/highlight/">Highlight</a></li>
+                                    <li><a href="http://lienminh360.vn/video/highlights-cao-thu/">Cao Thủ</a></li>
+                                    <li><a href="http://lienminh360.vn/video/khac-video/">Khác</a></li>
+                                </div>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="http://lienminh360.vn/hinh-anh-cosplay/" style="color: yellow;">Hình Ảnh</a>
+                            <ul class="sub-menu">
+                                <div class="transparent"></div>
+                                <div class="inner">
+                                    <li><a href="http://lienminh360.vn/hinh-anh-cosplay/tac-pham-cong-dong/">Fan Art</a>
+                                    </li>
+                                    <li><a href="http://lienminh360.vn/hinh-anh-cosplay/giai-dau/">Giải Đấu</a></li>
+                                    <li><a href="http://lienminh360.vn/hinh-anh-cosplay/cosplay/">Cosplay</a></li>
+                                </div>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <table border="0" cellspacing="0">
+                <td id="trang-chu"> <a href="index.html"> TRANG CHỦ </a> </td>
+                <td> <a href="http://lienminh360.vn/tin-game/"> TIN GAME <i class="fa fa-angle-down"></i> </a>
+                    <ul class="submenu">
+                        <li><a href="http://lienminh360.vn/tin-game/phan-tich/">Phân tích</a></li>
+                        <li><a href="http://lienminh360.vn/tin-game/xu-huong/">Xu hướng</a></li>
+                        <li><a href="http://lienminh360.vn/tin-game/pbe/">PBE</a></li>
+                        <li><a href="http://lienminh360.vn/tin-game/phat-trien/">Phát triển</a></li>
+                    </ul>
+                </td>
+                <td> <a href="http://lienminh360.vn/esports/"> TIN ESPORT <i class="fa fa-angle-down"></i> </a>
+                    <ul class="submenu">
+                        <li><a href="http://lienminh360.vn/esports/lich-thi-dau/">Lịch thi đấu</a></li>
+                        <li><a href="http://lienminh360.vn/esports/giai-trong-nuoc/">VCS</a></li>
+                        <li><a href="http://lienminh360.vn/esports/quoc-te/">Quốc tế</a></li>
+                        <li><a href="http://lienminh360.vn/esports/lcs-lec/">LCS/LEC</a></li>
+                        <li><a href="http://lienminh360.vn/esports/lck-lpl/">LCk/LPL</a></li>
+                        <li><a href="http://lienminh360.vn/esports/others/">Khu vực khác</a></li>
+                    </ul>
+                </td>
+                <td> <a href="http://lienminh360.vn/cam-nang/"> CẨM NANG <i class="fa fa-angle-down"></i> </a>
+                    <ul class="submenu">
+                        <li><a href="http://lienminh360.vn/cam-nang/chien-thuat/">Chiến thuật</a></li>
+                        <li><a href="http://lienminh360.vn/cam-nang/co-che-hoat-dong/">Cơ chế hoạt động</a></li>
+                        <li><a href="http://lienminh360.vn/cam-nang/tuong/">Tướng</a></li>
+                        <li><a href="http://lienminh360.vn/cam-nang/khac/">Khác</a></li>
+                    </ul>
+                </td>
+                <td> <a href="http://lienminh360.vn/cong-dong/"> CỘNG ĐỒNG <i class="fa fa-angle-down"></i> </a>
+                    <ul class="submenu">
+                        <li><a href="http://lienminh360.vn/cong-dong/stream/">Stream</a></li>
+                        <li><a href="http://lienminh360.vn/cong-dong/gear/">Gear</a></li>
+                    </ul>
+                </td>
+                <td> <a href="http://lienminh360.vn/video/"> VIDEO <i class="fa fa-angle-down"></i> </a>
+                    <ul class="submenu">
+                        <li><a href="http://lienminh360.vn/video/highlights-giai-dau/">Highlights Giải đấu</a>
+                        </li>
+                        <li><a href="http://lienminh360.vn/video/hai-huoc/">Funny</a></li>
+                        <li><a href="http://lienminh360.vn/video/highlight/">Highlight</a></li>
+                        <li><a href="http://lienminh360.vn/video/highlights-cao-thu/">Cao thủ</a></li>
+                        <li><a href="http://lienminh360.vn/video/khac-video/">Khác</a></li>
+                    </ul>
+                </td>
+                <td> <a href="http://lienminh360.vn/hinh-anh-cosplay/"> HÌNH ẢNH <i class="fa fa-angle-down"></i>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="http://lienminh360.vn/hinh-anh-cosplay/tac-pham-cong-dong/">Fan art</a>
+                        </li>
+                        <li><a href="http://lienminh360.vn/hinh-anh-cosplay/giai-dau/">Giải đấu</a></li>
+                        <li><a href="http://lienminh360.vn/hinh-anh-cosplay/cosplay/">Cosplay</a></li>
+                    </ul>
+                </td>
+            </table>
+            <div class="search-social">
+                <form class="searchbox" method="GET" action="./index.html"
+                    onsubmit="let resultSearch= obj.resultSearch(this.s.value); return resultSearch">
+                    <input type="text" placeholder="Tìm kiếm" name="s" id="searchInput">
+                    <input type="submit" value="">
+                    <i class="fa fa-search"></i>
+                </form>
+            </div>
+        </div>
+        <div class="container search" id="container-search">
+            <div class="blockrows">
+                <!-- content left-->
+                <div class="primary">
+                    <h3 class="widget-title black">
+                        <span>Tìm kiếm</span>
+                    </h3>
+                    <div class="featured_posts clearfix">
+                        <div class="lastest-post" id="result-search"> </div>
+                    </div>
+                </div>
+                <div class="secondary">
+                    <div class="widget recent-posts-hot-class">
+                        <div class="inner">
+                            <div class="featured_posts clearfix">
+                                <h3 class="widget-title pink">
+                                    <span>Tin Hot Trong Tuần</span>
+                                    </a>
+                                </h3>
+                                <div class="vertical_posts ">
+                                    <div class="single-article clearfix">
+                                        <figure>
+                                            <a
+                                                href="http://lienminh360.vn/tin-game/tham-gia-hoa-linh-chieu-du-gui-thiep-hao-huu-hoi-tu-anh-hung-tu-2307-den-0908/">
+                                                <img width="300" height="200" src="./anh/7.jpg">
+                                            </a>
+                                        </figure>
+                                        <div class="article-content">
+                                            <h3 class="entry-title">
+                                                <a
+                                                    href="http://lienminh360.vn/tin-game/tham-gia-hoa-linh-chieu-du-gui-thiep-hao-huu-hoi-tu-anh-hung-tu-2307-den-0908/">Tham
+                                                    gia "Hoa Linh Chiếu Dụ" - Gửi thiệp hảo hữu, hội tụ anh hùng từ
+                                                    23/07 đến 09/08
+                                                </a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="single-article clearfix">
+                                        <figure>
+                                            <a
+                                                href="http://lienminh360.vn/tin-game/quy-doi-rp-hoan-tra-ngay-60-gia-tri-tu-0030-2307-den-2359-2907/">
+                                                <img width="300" height="200" src="./anh/8.jpg">
+                                            </a>
+                                        </figure>
+                                        <div class="article-content">
+                                            <h3 class="entry-title">
+                                                <a
+                                                    href="http://lienminh360.vn/tin-game/quy-doi-rp-hoan-tra-ngay-60-gia-tri-tu-0030-2307-den-2359-2907/">Quy
+                                                    đổi RP - Hoàn trả ngay 60% giá trị từ 00:30 23/07 đến 23:59
+                                                    29/07
+                                                </a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="single-article clearfix">
+                                        <figure>
+                                            <a
+                                                href="http://lienminh360.vn/tin-game/ra-mat-ve-hoa-linh-luc-dia-mua-ve-gia-re-mo-khoa-nhiem-vu-va-qua-tang-doc-quyen-tu-2307-den-2508/">
+                                                <img width="300" height="200" src="./anh/9.jpg">
+                                            </a>
+                                        </figure>
+                                        <div class="article-content">
+                                            <h3 class="entry-title">
+                                                <a
+                                                    href="http://lienminh360.vn/tin-game/ra-mat-ve-hoa-linh-luc-dia-mua-ve-gia-re-mo-khoa-nhiem-vu-va-qua-tang-doc-quyen-tu-2307-den-2508/">Ra
+                                                    mắt Vé Hoa Linh Lục Địa - Mua vé giá rẻ, mở khóa nhiệm vụ và quà
+                                                    tặng độc quyền từ 23/07 đến 25/08
+                                                </a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="single-article clearfix">
+                                        <figure>
+                                            <a
+                                                href="http://lienminh360.vn/esports/founder-wescan-tinikun-team-tg-va-v-gaming-se-la-2-cai-ten-sang-gia-cho-chuc-vo-dich-wescan-academy-challenge/">
+                                                <img width="300" height="200" src="./anh/10.jpg">
+                                            </a>
+                                        </figure>
+                                        <div class="article-content">
+                                            <h3 class="entry-title">
+                                                <a
+                                                    href="http://lienminh360.vn/esports/founder-wescan-tinikun-team-tg-va-v-gaming-se-la-2-cai-ten-sang-gia-cho-chuc-vo-dich-wescan-academy-challenge/">Founder
+                                                    WeScan - Tinikun: “Team TG và V Gaming sẽ là 2 cái tên sáng giá cho
+                                                    chức vô địch WeScan Academy Challenge”
+                                                </a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="single-article clearfix">
+                                        <figure>
+                                            <a
+                                                href="http://lienminh360.vn/tin-game/tham-gia-mua-1-tang-2-uu-dai-dac-biet-gia-tri-sieu-hap-dan-tu-1707-den-2207/">
+                                                <img width="300" height="200" src="./anh/11.jpg">
+                                            </a>
+                                        </figure>
+                                        <div class="article-content">
+                                            <h3 class="entry-title">
+                                                <a
+                                                    href="http://lienminh360.vn/tin-game/tham-gia-mua-1-tang-2-uu-dai-dac-biet-gia-tri-sieu-hap-dan-tu-1707-den-2207/">Tham
+                                                    gia "Mua 1 Tặng 2" - Ưu đãi đặc biệt, giá trị siêu hấp dẫn từ 17/07
+                                                    đến 22/07
+                                                </a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="container-main">
+            <div class="newstop">
+                <div id="recent-posts-home-2">
+                    <div style="overflow: hidden;">
+                        <div class="blockLeft">
+                            <div class="bxone">
+                                <div class="block_wrap">
+                                    <div class="mySlides fade">
+                                        <a class="bx-img"
+                                            href="http://lienminh360.vn/tin-game/tham-gia-hoa-linh-thien-thu-hot-hang-tuyet-pham-voi-gia-uu-dai-tu-1000-3007-den-0508/">
+                                            <img width="585" height="445" src="./anh/0.jpg" alt="0">
+                                        </a>
+                                        <div class="info">
+                                            <span class="cate">Tin Game</span>
+                                            <h3>
+                                                <a
+                                                    href="http://lienminh360.vn/tin-game/tham-gia-hoa-linh-thien-thu-hot-hang-tuyet-pham-voi-gia-uu-dai-tu-1000-3007-den-0508/">
+                                                    Tham gia “Hoa Linh Thiên Thư” – Hốt hàng Tuyệt Phẩm với giá ưu đãi
+                                                    từ 10:00 30/07 đến 05/08
+                                                </a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="mySlides fade">
+                                        <a class="bx-img"
+                                            href="http://lienminh360.vn/tin-game/quy-doi-rp-nhan-mien-phi-trang-phuc-khi-dat-moc-tu-1000-3007-den-0000-0608/">
+                                            <img width="585" height="445" src="./anh/1.jpg" alt="1">
+                                        </a>
+                                        <div class="info">
+                                            <span class="cate">Tin Game</span>
+                                            <h3>
+                                                <a
+                                                    href="http://lienminh360.vn/tin-game/quy-doi-rp-nhan-mien-phi-trang-phuc-khi-dat-moc-tu-1000-3007-den-0000-0608/">
+                                                    Quy đổi RP – Nhận miễn phí trang phục khi đạt mốc từ 10:00 30/07 đến
+                                                    00:00 06/08
+                                                </a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="mySlides fade">
+                                        <a class="bx-img"
+                                            href="http://lienminh360.vn/tin-game/tham-gia-hoa-linh-lu-quan-tang-qua-ket-duyen-ruoc-ngay-anh-hung-tu-2307-den-0508/">
+                                            <img width="585" height="445" src="./anh/8.1.jpg" alt="2">
+                                        </a>
+                                        <div class="info">
+                                            <span class="cate">Tin Game</span>
+                                            <h3>
+                                                <a
+                                                    href="http://lienminh360.vn/tin-game/tham-gia-hoa-linh-lu-quan-tang-qua-ket-duyen-ruoc-ngay-anh-hung-tu-2307-den-0508/">Tham
+                                                    gia “Hoa Linh Lữ Quán” – Tặng quà kết duyên, rước ngay anh hùng từ
+                                                    23/07 đến 05/08
+                                                </a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="mySlides fade">
+                                        <a class="bx-img"
+                                            href="http://lienminh360.vn/tin-game/cong-bo-giai-dau-solo-yasuo-thach-dau-than-kiem-tu-03-08-den-08-08/">
+                                            <img width="585" height="445" src="./anh/soloys.jpg" alt="3">
+                                        </a>
+                                        <div class="info">
+                                            <span class="cate">Tin Game</span>
+                                            <h3>
+                                                <a
+                                                    href="http://lienminh360.vn/tin-game/cong-bo-giai-dau-solo-yasuo-thach-dau-than-kiem-tu-03-08-den-08-08/">
+                                                    Công bố giải đấu Solo Yasuo – Thách Đấu Thần Kiếm từ 03.08 đến 08.08
+                                                </a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div style="text-align:center">
+                                <span class="dot" onclick="currentSlide(0)"></span>
+                                <span class="dot" onclick="currentSlide(1)"></span>
+                                <span class="dot" onclick="currentSlide(2)"></span>
+                                <span class="dot" onclick="currentSlide(3)"></span>
+                            </div>
+                        </div>
+                        <div class="blockRight">
+                            <div class="bxtwo">
+                                <div class="block_wrap ">
+                                    <a class="bx-img"
+                                        href="http://lienminh360.vn/tin-game/tham-gia-lien-ket-hoa-linh-trai-nghiem-co-1-0-2-nhan-nhieu-qua-tang-gia-tri-tu-2307-den-2508/">
+                                        <img width="504" height="252" src="./anh/2.jpg" alt="4">
+                                    </a>
+                                    <div class="info">
+                                        <span class="cate">Tin Game</span>
+                                        <h3>
+                                            <a
+                                                href="http://lienminh360.vn/tin-game/tham-gia-lien-ket-hoa-linh-trai-nghiem-co-1-0-2-nhan-nhieu-qua-tang-gia-tri-tu-2307-den-2508/">
+                                                Tham gia “Liên Kết Hoa Linh” – Trải nghiệm có 1-0-2, nhận nhiều quà tặng
+                                                giá trị từ 23/07 đến 25/08
+                                            </a>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bxthree">
+                                <div class="block_wrap ">
+                                    <a class="bx-img"
+                                        href="http://lienminh360.vn/video/tieu-diem-trang-phuc-vayne-tuyet-vong-chi-tien-hoa-linh-luc-dia-2020/">
+                                        <img width="252" height="189" src="./anh/3.jpg" alt="5">
+                                    </a>
+                                    <div class="info">
+                                        <span class="cate">Video</span>
+                                        <h3>
+                                            <a
+                                                href="http://lienminh360.vn/video/tieu-diem-trang-phuc-vayne-tuyet-vong-chi-tien-hoa-linh-luc-dia-2020/">Tiêu
+                                                điểm trang phục: Vayne Tuyệt Vọng Chi Tiễn | Hoa Linh Lục Địa 2020
+                                            </a>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bxfour">
+                                <div class="block_wrap ">
+                                    <a class="bx-img" href="http://lienminh360.vn/video/2375031/">
+                                        <img width="252" height="189" src="./anh/4.jpg" alt="6">
+                                    </a>
+                                    <div class="info">
+                                        <span class="cate">Video</span>
+                                        <h3>
+                                            <a href="http://lienminh360.vn/video/2375031/">Tiêu điểm trang phục: Thresh
+                                                Ẩn Diện Quỷ Thần | Hoa Linh Lục Địa 2020
+                                            </a>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="input" class="input">
+                <form action="./index.html" method="GET" onsubmit="return result(this.emailbox.value)"
+                    oninput="return result(this.emailbox.value)">
+                    <button class="close" onclick="closeX()">X</button>
+                    <p>Nhập email để nhận cập nhật thông tin khuyến mãi sớm nhất</p>
+                    <input class="email" id="email" type="text" name="emailbox" value="" placeholder="Email Address" />
+                    <button class=" button" type="submit" value="Submit"
+                        onclick="return result(this.emailbox.value)">Đăng
+                        ký</button><br>
+                    <div id="circle"></div>
+                    <div id="check"></div>
+                </form>
+            </div>
+            <div class="blockrows">
+                <div class="primary">
+
+                    <div class="featured_posts clearfix">
+                        <h3 class="widget-title orange"><a href="http://lienminh360.vn/esports/"><span>Tin
+                                    Esports</span></a>
+                            <p class="linktabs">
+                                <a href="http://lienminh360.vn?cat=22651">Hình Ảnh</a><a
+                                    href="http://lienminh360.vn?cat=39571">Khu vực khác</a><a
+                                    href="http://lienminh360.vn?cat=34261">LCK/LPL</a><a
+                                    href="http://lienminh360.vn?cat=34271">LCS / LEC</a>
+                                <a href="http://lienminh360.vn?cat=34241">Lịch thi đấu</a><a
+                                    href="http://lienminh360.vn?cat=34281">Quốc tế</a><a
+                                    href="http://lienminh360.vn?cat=34251">VCS</a><a
+                                    href="http://lienminh360.vn?cat=23711">Video</a> </p>
+                        </h3>
+                        <div class="first-post tg-one">
+                            <div class="single-article">
+                                <figure>
+                                    <a class="bx-img"
+                                        href="http://lienminh360.vn/esports/vcs-mua-he-2020-tuan-7-ngay-1-per-vs-gam-esports-opg-vs-team-secret-cuoc-chien-giua-hai-thai-cuc/">
+                                        <img width="600" height="338" src="./anh/5.jpg">
+                                    </a>
+                                </figure>
+                                <div class="article-content">
+                                    <h3 class="entry-title">
+                                        <a
+                                            href="http://lienminh360.vn/esports/vcs-mua-he-2020-tuan-7-ngay-1-per-vs-gam-esports-opg-vs-team-secret-cuoc-chien-giua-hai-thai-cuc/">[VCS
+                                            Mùa Hè 2020 Tuần 7 Ngày 1] PER vs. GAM Esports, OPG vs. Team Secret: Cuộc
+                                            chiến giữa hai thái cực
+                                        </a>
+                                    </h3>
+                                    <p>Khó cho các đội top dưới!!</p>
+                                </div>
+                            </div>
+                            <ul class="listsubnews">
+                                <li>
+                                    <a
+                                        href="http://lienminh360.vn/esports/chinh-thuc-percent-esports-chuyen-minh-voi-hai-nha-dau-tu-moi/">CHÍNH
+                                        THỨC: Percent Esports chuyển mình với hai nhà đầu tư mới!!
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="http://lienminh360.vn/esports/vcs-mua-he-2020-ts-kingj-luc-lam-tuyen-thu-thi-minh-dau-tay-bay-gio-lam-huan-luyen-vien-thi-dau-dau/">[VCS
+                                        Mùa Hè 2020] TS KingJ: “Lúc làm tuyển thủ thì mình đau tay, bây giờ làm huấn
+                                        luyện viên thì đau đầu”
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="first-post  tg-two">
+                            <div class="single-article">
+                                <figure>
+                                    <a class="bx-img"
+                                        href="http://lienminh360.vn/esports/vcs-mua-he-2020-team-flash-phai-chang-that-bai-dau-mua-chi-la-de-loc-fan/">
+                                        <img width="1280" height="720" src="./anh/6.jpg">
+                                    </a>
+                                </figure>
+                                <div class="article-content">
+                                    <h3 class="entry-title">
+                                        <a
+                                            href="http://lienminh360.vn/esports/vcs-mua-he-2020-team-flash-phai-chang-that-bai-dau-mua-chi-la-de-loc-fan/">[VCS
+                                            Mùa Hè 2020] Team Flash – Phải chăng thất bại đầu mùa chỉ là để “lọc
+                                            fan”?
+                                        </a>
+                                    </h3>
+                                    <p>Flash vẫn quá mạnh</p>
+                                </div>
+                            </div>
+                            <ul class="listsubnews">
+                                <li>
+                                    <a
+                                        href="http://lienminh360.vn/esports/vcs-mua-he-2020-doi-hinh-tieu-bieu-tuan-6-team-secret-ruc-sang/">[VCS
+                                        Mùa Hè 2020] Đội Hình Tiêu Biểu Tuần 6: Team Secret rực sáng
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        href="http://lienminh360.vn/esports/vcs-mua-he-2020-tong-ket-tuan-thi-dau-thu-6-ces-khong-con-thong-tri-team-flash-leo-mot-mach-len-ngoi-dau/">[VCS
+                                        Mùa Hè 2020] Tổng kết tuần thi đấu thứ 6: CES không còn thống trị, Team Flash
+                                        leo một mạch lên ngôi đầu
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="secondary">
+                    <div class="widget recent-posts-hot-class">
+                        <div class="inner">
+                            <div class="featured_posts clearfix">
+                                <h3 class="widget-title pink">
+                                    <span>Tin Hot Trong Tuần</span>
+                                    </a>
+                                </h3>
+                                <div class="vertical_posts ">
+                                    <div class="single-article clearfix">
+                                        <figure>
+                                            <a
+                                                href="http://lienminh360.vn/tin-game/tham-gia-hoa-linh-chieu-du-gui-thiep-hao-huu-hoi-tu-anh-hung-tu-2307-den-0908/">
+                                                <img width="300" height="200" src="./anh/7.jpg">
+                                            </a>
+                                        </figure>
+                                        <div class="article-content">
+                                            <h3 class="entry-title">
+                                                <a
+                                                    href="http://lienminh360.vn/tin-game/tham-gia-hoa-linh-chieu-du-gui-thiep-hao-huu-hoi-tu-anh-hung-tu-2307-den-0908/">Tham
+                                                    gia "Hoa Linh Chiếu Dụ" - Gửi thiệp hảo hữu, hội tụ anh hùng từ
+                                                    23/07 đến 09/08
+                                                </a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="single-article clearfix">
+                                        <figure>
+                                            <a
+                                                href="http://lienminh360.vn/tin-game/quy-doi-rp-hoan-tra-ngay-60-gia-tri-tu-0030-2307-den-2359-2907/">
+                                                <img width="300" height="200" src="./anh/8.jpg">
+                                            </a>
+                                        </figure>
+                                        <div class="article-content">
+                                            <h3 class="entry-title">
+                                                <a
+                                                    href="http://lienminh360.vn/tin-game/quy-doi-rp-hoan-tra-ngay-60-gia-tri-tu-0030-2307-den-2359-2907/">Quy
+                                                    đổi RP - Hoàn trả ngay 60% giá trị từ 00:30 23/07 đến 23:59
+                                                    29/07
+                                                </a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="single-article clearfix">
+                                        <figure>
+                                            <a
+                                                href="http://lienminh360.vn/tin-game/ra-mat-ve-hoa-linh-luc-dia-mua-ve-gia-re-mo-khoa-nhiem-vu-va-qua-tang-doc-quyen-tu-2307-den-2508/">
+                                                <img width="300" height="200" src="./anh/9.jpg">
+                                            </a>
+                                        </figure>
+                                        <div class="article-content">
+                                            <h3 class="entry-title">
+                                                <a
+                                                    href="http://lienminh360.vn/tin-game/ra-mat-ve-hoa-linh-luc-dia-mua-ve-gia-re-mo-khoa-nhiem-vu-va-qua-tang-doc-quyen-tu-2307-den-2508/">Ra
+                                                    mắt Vé Hoa Linh Lục Địa - Mua vé giá rẻ, mở khóa nhiệm vụ và quà
+                                                    tặng độc quyền từ 23/07 đến 25/08
+                                                </a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="single-article clearfix">
+                                        <figure>
+                                            <a
+                                                href="http://lienminh360.vn/esports/founder-wescan-tinikun-team-tg-va-v-gaming-se-la-2-cai-ten-sang-gia-cho-chuc-vo-dich-wescan-academy-challenge/">
+                                                <img width="300" height="200" src="./anh/10.jpg">
+                                            </a>
+                                        </figure>
+                                        <div class="article-content">
+                                            <h3 class="entry-title">
+                                                <a
+                                                    href="http://lienminh360.vn/esports/founder-wescan-tinikun-team-tg-va-v-gaming-se-la-2-cai-ten-sang-gia-cho-chuc-vo-dich-wescan-academy-challenge/">Founder
+                                                    WeScan - Tinikun: “Team TG và V Gaming sẽ là 2 cái tên sáng giá cho
+                                                    chức vô địch WeScan Academy Challenge”
+                                                </a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="single-article clearfix">
+                                        <figure>
+                                            <a
+                                                href="http://lienminh360.vn/tin-game/tham-gia-mua-1-tang-2-uu-dai-dac-biet-gia-tri-sieu-hap-dan-tu-1707-den-2207/">
+                                                <img width="300" height="200" src="./anh/11.jpg">
+                                            </a>
+                                        </figure>
+                                        <div class="article-content">
+                                            <h3 class="entry-title">
+                                                <a
+                                                    href="http://lienminh360.vn/tin-game/tham-gia-mua-1-tang-2-uu-dai-dac-biet-gia-tri-sieu-hap-dan-tu-1707-den-2207/">Tham
+                                                    gia "Mua 1 Tặng 2" - Ưu đãi đặc biệt, giá trị siêu hấp dẫn từ 17/07
+                                                    đến 22/07
+                                                </a>
+                                            </h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blockrows">
+                <div class="primary">
+                    <div class="featured_posts clearfix">
+                        <h3 class="widget-title orange">
+                            <a href="http://lienminh360.vn/cam-nang/">
+                                <span>Cẩm Nang</span>
+                            </a>
+                            <p class="linktabs">
+                                <a href="http://lienminh360.vn?cat=8">Chiến Thuật</a><a
+                                    href="http://lienminh360.vn?cat=9">Cơ Chế Hoạt Động</a><a
+                                    href="http://lienminh360.vn?cat=10">Khác</a><a
+                                    href="http://lienminh360.vn?cat=7">Tướng</a> </p>
+                        </h3>
+                        <div class="lastest-post">
+                            <div class="single-article clearfix">
+                                <figure>
+                                    <a class="bx-img"
+                                        href="http://lienminh360.vn/cam-nang/mot-so-loi-khuyen-huu-ich-se-giup-ban-cai-thien-trai-nghiem-khi-leo-hang-lien-minh-huyen-thoai/">
+                                        <img width="600" height="338" src="./anh/12.jpg">
+                                    </a>
+                                </figure>
+                                <div class="article-content">
+                                    <h3 class="entry-title">
+                                        <a
+                                            href="http://lienminh360.vn/cam-nang/mot-so-loi-khuyen-huu-ich-se-giup-ban-cai-thien-trai-nghiem-khi-leo-hang-lien-minh-huyen-thoai/">Một
+                                            số lời khuyên hữu ích sẽ giúp bạn cải thiện trải nghiệm khi leo hạng Liên
+                                            Minh Huyền Thoại
+                                        </a>
+                                    </h3>
+                                    <p>Làm thế nào để cải thiện trải nghiệm ...</p>
+                                </div>
+                            </div>
+                            <div class="single-article clearfix">
+                                <figure>
+                                    <a class="bx-img"
+                                        href="http://lienminh360.vn/cam-nang/huong-dan-loi-choi-lillia-di-rung-nen-phat-chet-luon/">
+                                        <img width="600" height="338" src="./anh/13.jpg">
+                                    </a>
+                                </figure>
+                                <div class="article-content">
+                                    <h3 class="entry-title">
+                                        <a
+                                            href="http://lienminh360.vn/cam-nang/huong-dan-loi-choi-lillia-di-rung-nen-phat-chet-luon/">Hướng
+                                            dẫn lối chơi Lillia đi rừng “Nện phát chết luôn”
+                                        </a>
+                                    </h3>
+                                    <p>Lillia đáng yêu, dễ thương nhưng không ...</p>
+                                </div>
+                            </div>
+                            <div class="single-article clearfix">
+                                <figure>
+                                    <a class="bx-img"
+                                        href="http://lienminh360.vn/cam-nang/pha-dao-bac-xep-hang-cung-sett-phien-ban-chi-lao-ve-phia-truoc/">
+                                        <img width="600" height="338" src="./anh/14.jpg">
+                                    </a>
+                                </figure>
+                                <div class="article-content">
+                                    <h3 class="entry-title">
+                                        <a
+                                            href="http://lienminh360.vn/cam-nang/pha-dao-bac-xep-hang-cung-sett-phien-ban-chi-lao-ve-phia-truoc/">Phá
+                                            đảo bậc xếp hạng cùng Sett phiên bản chỉ lao về phía trước
+                                        </a>
+                                    </h3>
+                                    <p>Cùng tìm hiểu lối chơi đang làm mưa làm ...</p>
+                                </div>
+                            </div>
+                            <div class="single-article clearfix">
+                                <figure>
+                                    <a class="bx-img"
+                                        href="http://lienminh360.vn/cam-nang/khoi-dau-vong-rung-mot-cach-hoan-hao-voi-nu-hoa-ben-len-lillia/">
+                                        <img width="600" height="338" src="./anh/15.jpg">
+                                    </a>
+                                </figure>
+                                <div class="article-content">
+                                    <h3 class="entry-title">
+                                        <a
+                                            href="http://lienminh360.vn/cam-nang/khoi-dau-vong-rung-mot-cach-hoan-hao-voi-nu-hoa-ben-len-lillia/">Khởi
+                                            đầu vòng rừng một cách hoàn hảo với Nụ Hoa Bẽn Lẽn Lillia
+                                        </a>
+                                    </h3>
+                                    <p>Làm thế nào để có khởi đầu hoàn hảo cùng ...</p>
+                                </div>
+                            </div>
+                            <div class="single-article clearfix">
+                                <figure>
+                                    <a class="bx-img"
+                                        href="http://lienminh360.vn/cam-nang/pha-dao-dau-truong-chan-ly-ung-thu-khong-loi-thoat-voi-doi-hinh-ho-ve-bi-an/">
+                                        <img width="1280" height="717" src="./anh/16.jpg">
+                                    </a>
+                                </figure>
+                                <div class="article-content">
+                                    <h3 class="entry-title">
+                                        <a
+                                            href="http://lienminh360.vn/cam-nang/pha-dao-dau-truong-chan-ly-ung-thu-khong-loi-thoat-voi-doi-hinh-ho-ve-bi-an/">[Phá
+                                            đảo Đấu Trường Chân Lý] Ung thư không lối thoát với đội hình Hộ Vệ Bí Ẩn
+                                        </a>
+                                    </h3>
+                                    <p>Siêu cứng mà còn nhiều sát thương</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="secondary">
+                    <div class="featured_posts clearfix">
+                        <h3 class="widget-title green">
+                            <a href="http://lienminh360.vn/tin-game/">
+                                <span>Tin Game </span>
+                            </a>
+                        </h3>
+                        <div class="vertical_posts ">
+                            <div class="single-article clearfix">
+                                <figure>
+                                    <a href="http://lienminh360.vn/tin-game/sinh-nhat-8-tuoi-qua-free-day-tui/">
+                                        <img width="959" height="540" src="./anh/17.jpg">
+                                    </a>
+                                </figure>
+                                <div class="article-content">
+                                    <h3 class="entry-title">
+                                        <a href="http://lienminh360.vn/tin-game/sinh-nhat-8-tuoi-qua-free-day-tui/">SINH
+                                            NHẬT 8 TUỔI QUÀ FREE ĐẦY TÚI
+                                        </a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="single-article clearfix">
+                                <figure>
+                                    <a
+                                        href="http://lienminh360.vn/tin-game/top-5-tuong-duoc-tang-suc-manh-ban-10-15-yuumi-duoc-tang-suc-manh-tro-lai/">
+                                        <img width="1280" height="720" src="./anh/18.jpg">
+                                    </a>
+                                </figure>
+                                <div class="article-content">
+                                    <h3 class="entry-title">
+                                        <a
+                                            href="http://lienminh360.vn/tin-game/top-5-tuong-duoc-tang-suc-manh-ban-10-15-yuumi-duoc-tang-suc-manh-tro-lai/">TOP
+                                            5 tướng được tăng sức mạnh bản 10.15: Yuumi được tăng sức mạnh trở lại</a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="single-article clearfix">
+                                <figure>
+                                    <a
+                                        href="http://lienminh360.vn/tin-game/sieu-khuyen-mai-trung-nhom-8-tu-25-07-den-29-07/">
+                                        <img width="960" height="540" src="./anh/19.jpg">
+                                    </a>
+                                </figure>
+                                <div class="article-content">
+                                    <h3 class="entry-title">
+                                        <a
+                                            href="http://lienminh360.vn/tin-game/sieu-khuyen-mai-trung-nhom-8-tu-25-07-den-29-07/">SIÊU
+                                            KHUYẾN MÃI TRỨNG NHÓM 8 – Từ 25.07 đến 29.07
+                                        </a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="single-article clearfix">
+                                <figure>
+                                    <a
+                                        href="http://lienminh360.vn/tin-game/con-ac-mong-ghep-nham-do-da-khong-con-khi-riot-chuan-bi-ra-mat-thien-ha-tach-do/">
+                                        <img width="1224" height="688" src="./anh/20.jpg">
+                                    </a>
+                                </figure>
+                                <div class="article-content">
+                                    <h3 class="entry-title">
+                                        <a
+                                            href="http://lienminh360.vn/tin-game/con-ac-mong-ghep-nham-do-da-khong-con-khi-riot-chuan-bi-ra-mat-thien-ha-tach-do/">Cơn
+                                            ác mộng ghép nhầm đồ đã không còn khi Riot chuẩn bị ra mắt Thiên Hà Tách
+                                            Đồ
+                                        </a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="single-article clearfix">
+                                <figure>
+                                    <a
+                                        href="http://lienminh360.vn/tin-game/cong-bo-cuoc-thi-ve-tranh-sinh-nhat-8-tuoi-x-hoa-linh-luc-dia-tong-giai-thuong-len-toi-200-trieu-tu-2707/">
+                                        <img width="800" height="450" src="./anh/21.jpg">
+                                    </a>
+                                </figure>
+                                <div class="article-content">
+                                    <h3 class="entry-title">
+                                        <a
+                                            href="http://lienminh360.vn/tin-game/cong-bo-cuoc-thi-ve-tranh-sinh-nhat-8-tuoi-x-hoa-linh-luc-dia-tong-giai-thuong-len-toi-200-trieu-tu-2707/">Công
+                                            bố cuộc thi vẽ tranh Sinh Nhật 8 Tuổi x Hoa Linh Lục Địa – Tổng giải thưởng
+                                            lên tới 200 triệu từ 27/07!
+                                        </a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget widget_sp_image">
+                        <div class="inner">
+                            <div class="featured_posts clearfix">
+                                <a
+                                    href="http://lienminh360.vn/tin-game/quy-doi-rp-mua-he-da-toi-quy-doi-nhan-ngay-30-gia-tri-rp-tu-0030-0307-den-2359-0907/">
+                                    <img width="298" height="397" style="max-width: 100%;" src="./anh/22.jpg">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blockrows">
+                <div class="primary">
+                </div>
+                <div class="secondary">
+                </div>
+            </div>
+            <div class="blockrows">
+                <div class="primary">
+                    <h3 class="widget-title blue">
+                        <a href="http://lienminh360.vn/video/">
+                            <span>Video</span>
+                        </a>
+                        <p class="linktabs">
+                            <a href="http://lienminh360.vn?cat=10411">Cao Thủ</a><a
+                                href="http://lienminh360.vn?cat=12">Hài Hước</a><a
+                                href="http://lienminh360.vn?cat=13">Highlight</a><a
+                                href="http://lienminh360.vn?cat=10401">Highlights Giải Đấu</a>
+                            <a href="http://lienminh360.vn?cat=15">Khác</a>
+                        </p>
+                    </h3>
+                    <ul class="postimg">
+                        <li>
+                            <div class="item-im">
+                                <a class="bx-img" href="http://lienminh360.vn/video/kogmaw-3-sao-ban-cuc-dien-cuong/">
+                                    <img width="1280" height="720" src="./anh/23.jpg">
+                                </a>
+                                <a class="act"
+                                    href="http://lienminh360.vn/video/kogmaw-3-sao-ban-cuc-dien-cuong/">Kog’Maw 3 sao
+                                    bắn cực điên cuồng
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-im">
+                                <a class="bx-img"
+                                    href="http://lienminh360.vn/video/chien-thuat-nang-9-som-voi-bard-hack-kinh-nghiem/">
+                                    <img width="1280" height="720" src="./anh/24.jpg">
+                                </a>
+                                <a class="act"
+                                    href="http://lienminh360.vn/video/chien-thuat-nang-9-som-voi-bard-hack-kinh-nghiem/">Chiến
+                                    thuật nâng 9 sớm với Bard hack kinh nghiệm
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-im">
+                                <a class="bx-img"
+                                    href="http://lienminh360.vn/video/nightblue3-di-rung-voi-ekko-cuc-kinh-di/">
+                                    <img width="1280" height="720" src="./anh/25.jpg">
+                                </a>
+                                <a class="act"
+                                    href="http://lienminh360.vn/video/nightblue3-di-rung-voi-ekko-cuc-kinh-di/">Nightblue3
+                                    Đi Rừng với Ekko cực kinh dị
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-im">
+                                <a class="bx-img"
+                                    href="http://lienminh360.vn/video/xin-zhao-ve-binh-tinh-tu-choc-sat-thuong-chuan-cuc-thon/">
+                                    <img width="1280" height="720" src="./anh/26.jpg">
+                                </a>
+                                <a class="act"
+                                    href="http://lienminh360.vn/video/xin-zhao-ve-binh-tinh-tu-choc-sat-thuong-chuan-cuc-thon/">Xin
+                                    Zhao Vệ Binh Tinh Tú chọc sát thương chuẩn cực thốn
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-im">
+                                <a class="bx-img"
+                                    href="http://lienminh360.vn/video/tieu-diem-trang-phuc-teemo-phong-linh-tieu-quai/">
+                                    <img width="1280" height="720" src="./anh/27.jpg">
+                                </a>
+                                <a class="act"
+                                    href="http://lienminh360.vn/video/tieu-diem-trang-phuc-teemo-phong-linh-tieu-quai/">Tiêu
+                                    điểm trang phục: Teemo Phong Linh Tiểu Quái
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item-im">
+                                <a class="bx-img"
+                                    href="http://lienminh360.vn/video/nhan-vat-quyen-luc-nhat-o-gmh-evos-harbinger-diary/">
+                                    <img width="1280" height="720" src="./anh/28.jpg">
+                                </a>
+                                <a class="act"
+                                    href="http://lienminh360.vn/video/nhan-vat-quyen-luc-nhat-o-gmh-evos-harbinger-diary/">Nhân
+                                    vật quyền lực nhất ở GMH EVOS – HARBINGER DIARY
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="secondary">
+                    <div class="featured_posts clearfix">
+                        <h3 class="widget-title green">
+                            <a href="http://lienminh360.vn/cong-dong/">
+                                <span>Cộng Đồng</span>
+                            </a>
+                        </h3>
+                        <div class="vertical_posts ">
+                            <div class="single-article clearfix">
+                                <figure>
+                                    <a
+                                        href="http://lienminh360.vn/cong-dong/wescan-academy-challenge-giai-dau-lmht-danh-cho-cac-tai-nang-tre-chinh-thuc-khoi-tranh-vao-ngay-217/">
+                                        <img width="1280" height="720" src="./anh/29.jpg">
+                                    </a>
+                                </figure>
+                                <div class="article-content">
+                                    <h3 class="entry-title">
+                                        <a
+                                            href="http://lienminh360.vn/cong-dong/wescan-academy-challenge-giai-dau-lmht-danh-cho-cac-tai-nang-tre-chinh-thuc-khoi-tranh-vao-ngay-217/">WeScan
+                                            Academy Challenge – Giải đấu LMHT dành cho các tài năng trẻ chính thức khởi
+                                            tranh vào ngày 21/7
+                                        </a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="single-article clearfix">
+                                <figure>
+                                    <a
+                                        href="http://lienminh360.vn/cong-dong/phan-ung-cong-dong-ve-ban-10-13-meo-yuumi-an-qua-nerf-dau/">
+                                        <img width="600" height="338" src="./anh/30.jpg">
+                                    </a>
+                                </figure>
+                                <div class="article-content">
+                                    <h3 class="entry-title">
+                                        <a
+                                            href="http://lienminh360.vn/cong-dong/phan-ung-cong-dong-ve-ban-10-13-meo-yuumi-an-qua-nerf-dau/">Phản
+                                            ứng cộng đồng về bản 10.13: Mèo Yuumi ăn quả nerf đau
+                                        </a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="single-article clearfix">
+                                <figure>
+                                    <a
+                                        href="http://lienminh360.vn/cong-dong/phan-ung-cong-dong-ve-ban-10-11-fiddlesticks-som-tro-thanh-trum-khu-rung-thoi/">
+                                        <img width="600" height="338" src="./anh/31.jpg">
+                                    </a>
+                                </figure>
+                                <div class="article-content">
+                                    <h3 class="entry-title">
+                                        <a
+                                            href="http://lienminh360.vn/cong-dong/phan-ung-cong-dong-ve-ban-10-11-fiddlesticks-som-tro-thanh-trum-khu-rung-thoi/">Phản
+                                            ứng cộng đồng về bản 10.11: Fiddlesticks sớm trở thành trùm khu rừng
+                                            thôi!
+                                        </a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="single-article clearfix">
+                                <figure>
+                                    <a
+                                        href="http://lienminh360.vn/cong-dong/phan-ung-cong-dong-ve-ban-10-10-riot-lai-muon-cho-soraka-len-duong-tren-sao/">
+                                        <img width="1280" height="711" src="./anh/32.jpeg">
+                                    </a>
+                                </figure>
+                                <div class="article-content">
+                                    <h3 class="entry-title">
+                                        <a
+                                            href="http://lienminh360.vn/cong-dong/phan-ung-cong-dong-ve-ban-10-10-riot-lai-muon-cho-soraka-len-duong-tren-sao/">Phản
+                                            ứng cộng đồng về bản 10.10: Riot lại muốn cho Soraka lên Đường Trên sao?
+                                        </a>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="single-article clearfix">
+                                <figure>
+                                    <a
+                                        href="http://lienminh360.vn/cong-dong/se-nhu-the-nao-neu-leona-duoc-ra-mat-vao-mua-10/">
+                                        <img width="600" height="338" src="./anh/33.jpg">
+                                    </a>
+                                </figure>
+                                <div class="article-content">
+                                    <h3 class="entry-title">
+                                        <a
+                                            href="http://lienminh360.vn/cong-dong/se-nhu-the-nao-neu-leona-duoc-ra-mat-vao-mua-10/">Sẽ
+                                            như thế nào nếu Leona được ra mắt vào mùa 10?
+                                        </a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="featured_posts clearfix">
+                <h3 class="widget-title blue">
+                    <a href="http://lienminh360.vn/hinh-anh-cosplay/">
+                        <span>Hình Ảnh</span>
+                    </a>
+                    <p class="linktabs">
+                        <a href="http://lienminh360.vn?cat=18">Cosplay</a>
+                        <a href="http://lienminh360.vn?cat=19">Fan Art</a>
+                        <a href="http://lienminh360.vn?cat=34211">Giải Đấu</a>
+                        <a href="http://lienminh360.vn?cat=17">Riot games </a>
+                    </p>
+                </h3>
+                <ul class="postimg">
+                    <li>
+                        <div class="item-im">
+                            <a class="bx-img"
+                                href="http://lienminh360.vn/hinh-anh-cosplay/lac-vao-xu-hoa-linh-cung-bo-anh-cosplay-ahri-hoa-linh-luc-dia-day-quyen-ru/">
+                                <img width="600" height="338" src="./anh/36.jpg">
+                            </a>
+                            <a class="act"
+                                href="http://lienminh360.vn/hinh-anh-cosplay/lac-vao-xu-hoa-linh-cung-bo-anh-cosplay-ahri-hoa-linh-luc-dia-day-quyen-ru/">Lạc
+                                vào xứ Hoa Linh cùng bộ ảnh cosplay Ahri Hoa Linh Lục Địa đầy quyến rũ
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-im">
+                            <a class="bx-img"
+                                href="http://lienminh360.vn/hinh-anh-cosplay/tong-hop-fanart-dong-trang-phuc-hoa-linh-luc-dia/">
+                                <img width="600" height="338" src="./anh/34.jpg">
+                            </a>
+                            <a class="act"
+                                href="http://lienminh360.vn/hinh-anh-cosplay/tong-hop-fanart-dong-trang-phuc-hoa-linh-luc-dia/">Tổng
+                                hợp fanart dòng trang phục Hoa Linh Lục Địa
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-im">
+                            <a class="bx-img"
+                                href="http://lienminh360.vn/hinh-anh-cosplay/tong-hop-fanart-sieu-dang-yeu-ve-nu-hoa-ben-len-lillia/">
+                                <img width="600" height="338" src="./anh/35.jpg">
+                            </a>
+                            <a class="act"
+                                href="http://lienminh360.vn/hinh-anh-cosplay/tong-hop-fanart-sieu-dang-yeu-ve-nu-hoa-ben-len-lillia/">Tổng
+                                hợp fanart siêu đáng yêu về Nụ Hoa Bẽn Lẽn Lillia
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="wrapper clearfix">
+            <p>ĐỖ CHÁNH TÍN LỚP C0620I1 CODEGYM-HUẾ</p>
+            <h4>
+                <div class="nav-footer">
+                    <table>
+                        <td id="trang-chu"> <a href="index.html"> TRANG CHỦ </a> </td>
+                        <td> <a href="http://lienminh360.vn/tin-game/"> TIN GAME </a> </td>
+                        <td> <a href="http://lienminh360.vn/esports/"> TIN ESPORT </a> </td>
+                        <td> <a href="http://lienminh360.vn/cam-nang/"> CẨM NANG </a> </td>
+                        <td> <a href="http://lienminh360.vn/cong-dong/"> CỘNG ĐỒNG </a> </td>
+                        <td> <a href="http://lienminh360.vn/video/"> VIDEO </a> </td>
+                        <td> <a href="http://lienminh360.vn/hinh-anh-cosplay/"> HÌNH ẢNH </a> </td>
+                    </table>
+                </div>
+            </h4>
+            <div id="div-right" class="left">
+                <div class="widget-title black">
+                    <span>FOLLOW US</span>
+                </div>
+                <div class="f-icon">
+                    <a href="https://twitter.com/lienminh360" target="_blank">
+                        <span class="icon t">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                    <span class="icon g" onclick="mail()">
+                        <i class="fa fa-google-plus" aria-hidden="true"></i>
+                    </span>
+                    <a href="https://www.facebook.com/LienMinh360VN" target="_blank">
+                        <span class="icon f">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="right">
+                <a href="./index.html">
+                    <img src="http://lienminh360.vn/wp-content/themes/_gameplay/images/logo-footer.png" alt="">
+                </a>
+            </div>
+
+        </div>
+    </footer>
+</body>
+<script src="./js.js"></script>
+</script>
+
+</html>
