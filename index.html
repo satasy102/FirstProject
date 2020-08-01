@@ -225,8 +225,7 @@
                 </td>
             </table>
             <div class="search-social">
-                <form class="searchbox" method="GET" action="./index.html"
-                    onsubmit="let resultSearch= obj.resultSearch(this.s.value); return resultSearch">
+                <form class="searchbox" method="GET" action="./index.html" onsubmit="return search(event)">
                     <input type="text" placeholder="Tìm kiếm" name="s" id="searchInput">
                     <input type="submit" value="">
                     <i class="fa fa-search"></i>
