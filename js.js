@@ -129,7 +129,7 @@ function search(evt) {
             'Lạc vào xứ Hoa Linh cùng bộ ảnh cosplay Ahri Hoa Linh Lục Địa đầy quyến rũ',
             'Tổng hợp fanart dòng trang phục Hoa Linh Lục Địa',
             'Tổng hợp fanart siêu đáng yêu về Nụ Hoa Bẽn Lẽn Lillia',
-            'Tham gia “Hoa Linh Lữ Quán” – Tặng quà kết duyên, rước ngay anh hùng từ 23/07 đến 05/08', ,
+            'Tham gia “Hoa Linh Lữ Quán” – Tặng quà kết duyên, rước ngay anh hùng từ 23/07 đến 05/08',
             'Tiêu điểm trang phục: Vayne Tuyệt Vọng Chi Tiễn | Hoa Linh Lục Địa 2020',
             'Tiêu điểm trang phục: Thresh Ẩn Diện Quỷ Thần | Hoa Linh Lục Địa 2020',
             'Quy đổi RP – Nhận miễn phí trang phục khi đạt mốc từ 10:00 30/07 đến 00:00 06/08',
@@ -195,29 +195,36 @@ function search(evt) {
             document.getElementById('container-search').style.display = 'block';
             document.getElementById('container-main').style.display = 'none';
             document.getElementById('result-search').innerHTML = '';
-            inputSearch = document.getElementById('searchInput');
-            filter = inputSearch.value.toUpperCase();
+            let inputSearch = document.getElementById('searchInput');
+            let filter = inputSearch.value.toUpperCase();
+
+            let hasResult = false;
+
             for (i = 0; i < this.title.length; i++) {
-                x = this.title[i].toUpperCase();
+                x = this.title[i].toString().toUpperCase();
                 if (x.includes(filter)) {
                     document.getElementById('result-search').innerHTML += `
                     <div class="single-article clearfix">
-                    <figure>
-                        <a class="bx-img" href="${this.link[i]}">
-                            <img width="600" height="338" src="${this.image[i]}">
-                        </a>
-                    </figure>
-                    <div class="article-content">
-                        <h3 class="entry-title">
-                            <a href="${this.link[i]}">${this.title[i]}</a>
-                        </h3>
-                    </div>
-                </div>`;
+                        <figure>
+                            <a class="bx-img" href="${this.link[i]}">
+                                <img width="600" height="338" src="${this.image[i]}">
+                            </a>
+                        </figure>
+                        <div class="article-content">
+                            <h3 class="entry-title">
+                                <a href="${this.link[i]}">${this.title[i]}</a>
+                            </h3>
+                        </div>
+                    </div>`;
+                    hasResult = true;
                 }
+            }
+
+            if (!hasResult) {
+                document.getElementById('result-search').innerHTML = 'Không Tìm Thấy!!!';
             }
         }
     };
 
-    let keySearch = document.getElementById('searchInput').value;
-    obj.resultSearch(keySearch);
+    obj.resultSearch();
 }
