@@ -39,13 +39,14 @@ function currentSlide(n) {
 }
 
 //Kiểm tra Email
-document.getElementById('circle').style.display = "none";
+
 function result(a) {
     let result = checkEmail(a);
     return result;
 }
 
 function checkEmail(the_email) {
+
     let at = the_email.indexOf("@");
     let dot = the_email.lastIndexOf(".");
     let space = the_email.indexOf(" ");
