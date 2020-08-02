@@ -91,7 +91,7 @@ function mail() {
 //Chức năng tìm kiếm
 function search(evt) {
     evt.preventDefault();
-    
+
     let obj = {
         title: ['[VCS Mùa Hè 2020 Tuần 7 Ngày 1] PER vs. GAM Esports, OPG vs. Team Secret: Cuộc chiến giữa hai thái cực',
             '[VCS Mùa Hè 2020] Team Flash – Phải chăng thất bại đầu mùa chỉ là để “lọc fan”?',
@@ -209,7 +209,10 @@ function search(evt) {
             document.getElementById('container-search').style.display = 'block';
             document.getElementById('container-main').style.display = 'none';
             document.getElementById('result-search').innerHTML = '';
-            let inputSearch = document.getElementById('searchInput');
+            if (document.getElementById('nav').style.display != '') {
+                inputSearch = document.getElementById('searchInput1');
+            } else inputSearch = document.getElementById('searchInput');
+
             let filter = this.change_alias(inputSearch.value);
             let hasResult = false;
 
