@@ -7,7 +7,6 @@
     <link rel="stylesheet" type="text/css" href="./style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <title>Tin tức Liên Minh Huyền Thoại</title>
 </head>
 
@@ -67,10 +66,10 @@
             <nav class="wsmenu slideLeft menuclose" id="nav">
                 <button class="close" onclick="closeMenu()">X</button>
                 <div class="search-social">
-                    <form class="searchbox" method="get" id="searchforms" action="http://lienminh360.vn/">
-                        <input type="submit" value="" class="searchbtn">
-                        <input type="text" placeholder="Tìm kiếm" value="" class="searchtxt" name="s" id="s">
-                        <i class="fa fa-search"></i>
+                    <form class="searchbox" method="GET" action="./index.html" onsubmit="return search(event)">
+                        <input type="text" placeholder="Tìm kiếm" name="s" id="searchInput">
+                        <input type="submit" value="">
+                        <i class="fa fa-search" onclick="return search(event)"></i>
                     </form>
                 </div>
                 <div class="menu-main-menu-container">

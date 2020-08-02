@@ -8,8 +8,6 @@ function closeMenu() {
 }
 
 //Slide chạy
-
-
 //khai báo biến slideIndex đại diện cho slide hiện tại
 let slideIndex;
 // KHai bào hàm hiển thị slide
@@ -81,6 +79,7 @@ function checkEmail(the_email) {
         return false;
     }
 }
+
 function closeX() {
     document.getElementById('input').style.display = "none";
 }
@@ -89,10 +88,10 @@ function mail() {
     document.getElementById('input').style.display = 'flex';
 }
 
-
+//Chức năng tìm kiếm
 function search(evt) {
     evt.preventDefault();
-    //Chức năng tìm kiếm
+    
     let obj = {
         title: ['[VCS Mùa Hè 2020 Tuần 7 Ngày 1] PER vs. GAM Esports, OPG vs. Team Secret: Cuộc chiến giữa hai thái cực',
             '[VCS Mùa Hè 2020] Team Flash – Phải chăng thất bại đầu mùa chỉ là để “lọc fan”?',
@@ -190,18 +189,32 @@ function search(evt) {
             './image/41.jpg',
         ],
 
+        change_alias: function (alias) {
+            let str = alias;
+            str = str.toLowerCase();
+            str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
+            str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e");
+            str = str.replace(/ì|í|ị|ỉ|ĩ/g, "i");
+            str = str.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, "o");
+            str = str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, "u");
+            str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g, "y");
+            str = str.replace(/đ/g, "d");
+            str = str.replace(/!|@|%|\^|\*|\(|\)|\+|\=|\<|\>|\?|\/|,|\.|\:|\;|\'|\"|\&|\#|\[|\]|~|\$|_|`|-|{|}|\||\\/g, " ");
+            str = str.replace(/ + /g, " ");
+            str = str.trim();
+            return str;
+        },
 
         resultSearch: function () {
             document.getElementById('container-search').style.display = 'block';
             document.getElementById('container-main').style.display = 'none';
             document.getElementById('result-search').innerHTML = '';
             let inputSearch = document.getElementById('searchInput');
-            let filter = inputSearch.value.toUpperCase();
-
+            let filter = this.change_alias(inputSearch.value);
             let hasResult = false;
 
-            for (i = 0; i < this.title.length; i++) {
-                x = this.title[i].toString().toUpperCase();
+            for (let i = 0; i < this.title.length; i++) {
+                let x = this.change_alias(this.title[i].toString().toLowerCase());
                 if (x.includes(filter)) {
                     document.getElementById('result-search').innerHTML += `
                     <div class="single-article clearfix">
