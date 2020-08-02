@@ -686,7 +686,6 @@ a:hover {
     color: #d1090b
 }
 
-.widget-title .linktabs a.active,
 .widget-title .linktabs a:hover {
     color: #df0000
 }
@@ -746,7 +745,7 @@ img:hover {
     width: 20px;
     height: 20px;
     font-size: 20px;
-    margin-left: 210px;     
+    margin-left: 195px;     
 }
 
 @media screen and (max-width:1024px) {
@@ -1083,6 +1082,5 @@ img:hover {
         overflow: hidden;
         margin-bottom: 0
     }
-
 }
 

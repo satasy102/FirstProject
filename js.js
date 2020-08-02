@@ -9,17 +9,16 @@ function closeMenu() {
 
 //Slide chạy
 //khai báo biến slideIndex đại diện cho slide hiện tại
-let slideIndex;
+let slideIndex = 0;
 // KHai bào hàm hiển thị slide
 function showSlides() {
-    let i;
     let slides = document.getElementsByClassName("mySlides");
     let dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
+    for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
     for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace("active", "");
+        dots[i].className = dots[i].className.replace(" active", "");
     }
     slides[slideIndex].style.display = "block";
     dots[slideIndex].className += " active";
@@ -39,7 +38,6 @@ function currentSlide(n) {
 }
 
 //Kiểm tra Email
-
 function checkEmail(the_email) {
     let at = the_email.indexOf("@");
     let dot = the_email.lastIndexOf(".");
@@ -91,7 +89,7 @@ function result(a) {
 //Chức năng tìm kiếm
 function search(evt) {
     evt.preventDefault();
-
+    //Định nghĩa đối tượng
     let obj = {
         title: ['[VCS Mùa Hè 2020 Tuần 7 Ngày 1] PER vs. GAM Esports, OPG vs. Team Secret: Cuộc chiến giữa hai thái cực',
             '[VCS Mùa Hè 2020] Team Flash – Phải chăng thất bại đầu mùa chỉ là để “lọc fan”?',
@@ -189,6 +187,7 @@ function search(evt) {
             './image/41.jpg',
         ],
 
+        //Chuyển tiếng Việt có dấu thành không dấu, xóa tất cả ký tự đặc biệt và dấu cách
         change_alias: function (alias) {
             let str = alias;
             str = str.toLowerCase();
@@ -204,6 +203,8 @@ function search(evt) {
             return str;
         },
 
+
+        //In ra kết quả tìm kiếm
         resultSearch: function () {
             document.getElementById('container-search').style.display = 'block';
             document.getElementById('container-main').style.display = 'none';
@@ -214,7 +215,6 @@ function search(evt) {
 
             let filter = this.change_alias(inputSearch.value);
             let hasResult = false;
-
             for (let i = 0; i < this.title.length; i++) {
                 let x = this.change_alias(this.title[i].toString().toLowerCase());
                 if (x.includes(filter)) {
@@ -234,12 +234,10 @@ function search(evt) {
                     hasResult = true;
                 }
             }
-
             if (!hasResult) {
                 document.getElementById('result-search').innerHTML = 'Không Tìm Thấy!!!';
             }
         }
     };
-
     obj.resultSearch();
 }
