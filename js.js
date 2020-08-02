@@ -200,8 +200,7 @@ function search(evt) {
             str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g, "y");
             str = str.replace(/đ/g, "d");
             str = str.replace(/!|@|%|\^|\*|\(|\)|\+|\=|\<|\>|\?|\/|,|\.|\:|\;|\'|\"|\&|\#|\[|\]|~|\$|_|`|-|{|}|\||\\/g, " ");
-            str = str.replace(/ + /g, " ");
-            str = str.trim();
+            str = str.replace(/\s+/g, '');
             return str;
         },
 
