@@ -40,13 +40,7 @@ function currentSlide(n) {
 
 //Kiểm tra Email
 
-function result(a) {
-    let result = checkEmail(a);
-    return result;
-}
-
 function checkEmail(the_email) {
-
     let at = the_email.indexOf("@");
     let dot = the_email.lastIndexOf(".");
     let space = the_email.indexOf(" ");
@@ -87,6 +81,11 @@ function closeX() {
 
 function mail() {
     document.getElementById('input').style.display = 'flex';
+}
+
+function result(a) {
+    let result = checkEmail(a);
+    return result;
 }
 
 //Chức năng tìm kiếm
