@@ -1,36 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic&subset=latin,vietnamese,latin-ext);
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,300italic&subset=latin,vietnamese,cyrillic-ext,latin-ext);
-a,
-body {
+a, body {
     color: #333
 }
 
-.blockrows,
-.boxshare,
-.bxlistheroes .search-heros,
-.listheroes,
-.newstop,
-.postRelate,
-.postimg,
-.postvideo,
-.search-social,
-.widget-title,
-footer {
+.blockrows, .boxshare, .bxlistheroes .search-heros, .listheroes, .newstop, .postRelate, .postimg, .postvideo, .search-social, .widget-title, footer {
     overflow: hidden
 }
 
-Body,
-div,
-figure,
-h3,
-html,
-img,
-input,
-li,
-ol,
-p,
-ul 
-a{
+Body, div, figure, h3, html, img, input, li, ol, p, ul a {
     margin: 0;
     padding: 0;
     border: 0;
@@ -38,7 +16,7 @@ a{
     outline: 0!important
 }
 
-img{
+img {
     border: 0;
     max-width: 100%;
     vertical-align: middle;
@@ -46,7 +24,7 @@ img{
 }
 
 html {
-    background: url(http://lienminh360.vn/wp-content/themes/_gameplay/images/bg-main.jpg) top center no-repeat #ececec;
+    background: url(./anh/bg-main.jpg) top center no-repeat #ececec;
 }
 
 body {
@@ -56,15 +34,15 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: 22px;
-    background: url(http://lienminh360.vn/wp-content/themes/_gameplay/images/bg.png);
+    background: url(./anh/bg.png);
     margin: 0!important;
 }
 
-a,button {
+a, button {
     outline: 0
 }
 
-button{
+button {
     border: none;
 }
 
@@ -90,37 +68,37 @@ button{
     margin-left: 5px;
 }
 
-.f-icon .icon.f{
+.f-icon .icon.f {
     display: flex;
     background-color: rgb(40, 40, 128);
 }
 
-.f-icon .icon.g{
+.f-icon .icon.g {
     display: flex;
     background-color: rgb(202, 37, 15);
 }
 
-.f-icon .icon.t{
+.f-icon .icon.t {
     display: flex;
     background-color: rgb(20, 192, 183);
 }
 
-.f-icon .icon i{
+.f-icon .icon i {
     margin-top: auto;
     margin-bottom: auto;
     font-size: 25px;
     color: ivory;
 }
 
-.f-icon .icon p{
+.f-icon .icon p {
     font-weight: initial;
 }
 
-.widget-title.black span{
+.widget-title.black span {
     background-color: black;
 }
 
-.widget-title.black{
+.widget-title.black {
     border-bottom: black solid 2px;
     margin-bottom: 10px;
 }
@@ -134,7 +112,7 @@ button{
     height: 0;
 }
 
-#input{
+#input {
     width: 100%;
     height: 110px;
     display: none;
@@ -144,11 +122,11 @@ button{
     justify-content: center;
 }
 
-#input form{
+#input form {
     background-color: #333;
 }
 
-#input form p{
+#input form p {
     color: blue;
     font-weight: bold;
 }
@@ -169,9 +147,7 @@ button{
     margin-top: 6px;
 }
 
-.email:hover,
-.email:focus,
-.email:active {
+.email:hover, .email:focus, .email:active {
     outline: none;
 }
 
@@ -187,20 +163,18 @@ input::placeholder {
     color: white;
     border: none;
     margin-left: -50px;
-    background-image: linear-gradient(135deg, rgb(40, 128, 55) , blue);
+    background-image: linear-gradient(135deg, rgb(40, 128, 55), blue);
 }
 
-.button:hover,
-.button:focus,
-.button:active{
-    outline:none;
+.button:hover, .button:focus, .button:active {
+    outline: none;
     background-color: blue;
-    box-shadow: blue 2px 5px 6px;  
+    box-shadow: blue 2px 5px 6px;
 }
 
 .email:hover {
     border-style: solid;
-    border-color:red;
+    border-color: red;
 }
 
 #check {
@@ -223,26 +197,26 @@ input::placeholder {
 }
 
 .top-nav {
-	width: 1164px;
-	height: 56px;
-	background-color:#131313;
+    width: 1164px;
+    height: 56px;
+    background-color: #131313;
     min-height: 52px;
     display: flex;
 }
 
-.top-nav input{
-	border-radius: 0;
+.top-nav input {
+    border-radius: 0;
 }
 
 .top-nav td {
-	padding: 10px;
-	margin: 10px;
-	font-family: Time New Roman;
+    padding: 10px;
+    margin: 10px;
+    font-family: Time New Roman;
     font-weight: bold;
     text-align: center;
 }
 
-.top-nav a{
+.top-nav a {
     line-height: 36px;
     display: block;
     font-size: 14px;
@@ -251,47 +225,47 @@ input::placeholder {
     text-decoration: none;
 }
 
-.top-nav table{
-    flex:4;
+.top-nav table {
+    flex: 4;
 }
 
-.top-nav .search-social{
+.top-nav .search-social {
     flex: 1;
     display: inline-flex;
     height: 26px;
-    margin-top:30px;
+    margin-top: 30px;
 }
 
-.top-nav .submenu{
+.top-nav .submenu {
     visibility: hidden;
-    position:absolute;
+    position: absolute;
     text-align: left;
 }
 
-.top-nav td:hover{
-    background-color: #333; 
+.top-nav td:hover {
+    background-color: #333;
 }
 
-.top-nav td:hover .submenu{
+.top-nav td:hover .submenu {
     text-transform: uppercase;
     font-size: 15px;
     visibility: visible;
-    margin-top: 0.8%;;
+    margin-top: 0.8%;
+    ;
     margin-left: -10px;
     background-color: white;
     border-top: 3px red solid;
-    box-shadow: 1px 1px 1px 0.5px ;
+    box-shadow: 1px 1px 1px 0.5px;
     padding: 1%;
     line-height: 42px;
     z-index: 9999;
 }
 
-.top-nav td:hover .submenu a{ 
+.top-nav td:hover .submenu a {
     color: black;
 }
 
-
-.top-nav td:hover .submenu a:hover{
+.top-nav td:hover .submenu a:hover {
     color: red;
 }
 
@@ -320,12 +294,10 @@ input::placeholder {
 }
 
 .top-nav #trang-chu {
-	background-color: red;
-	
+    background-color: red;
 }
 
-.nav-footer li a,
-a {
+.nav-footer li a, a {
     text-decoration: none;
 }
 
@@ -334,28 +306,27 @@ a {
     padding: 3%;
 }
 
-.container.search{
+.container.search {
     display: none;
 }
 
 .newstop {
     margin-bottom: 20px;
 }
-  
+
 .mySlides {
-      display: none;
+    display: none;
 }
 
 .dot {
-    cursor:pointer;
+    cursor: pointer;
     height: 5px;
     width: 5px;
     margin: 0 3px;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
- 
-  }
+}
 
 .active, .dot:hover {
     background-color: #717171;
@@ -365,7 +336,7 @@ a {
     position: absolute;
     bottom: 0;
     padding: 15px;
-    background: url(http://lienminh360.vn/wp-content/themes/_gameplay/images/shadow.png) bottom left repeat-x;
+    background: url(./anh/shadow.png) bottom left repeat-x;
     color: #fff;
     left: 0;
     right: 0;
@@ -517,7 +488,7 @@ a {
     width: 100%;
 }
 
-.single-article{
+.single-article {
     margin-bottom: 17px;
 }
 
@@ -656,7 +627,7 @@ a {
 }
 
 footer {
-    background: url(http://lienminh360.vn/wp-content/themes/_gameplay/images/bg-footer.jpg) repeat-x #101010;
+    background: url(./anh/bg-footer.jpg) repeat-x #101010;
     padding: 42px 0;
     color: #707070;
     font-size: 14px;
@@ -665,22 +636,21 @@ footer {
 }
 
 footer .right {
-    float:right
+    float: right
 }
 
-footer .left{
+footer .left {
     float: left;
 }
 
-footer p{
+footer p {
     color: #d1090b;
     font-size: 20px;
 }
 
-footer p:hover{
+footer p:hover {
     color: blue;
 }
-
 
 a:hover {
     color: #d1090b
@@ -707,87 +677,78 @@ img:hover {
 }
 
 .manumain {
-	background-color: #333;
-	width: 100%;
-	height: 60px;
-	z-index: 999;
-	position: relative;
-	display: none;
+    background-color: #333;
+    width: 100%;
+    height: 60px;
+    z-index: 999;
+    position: relative;
+    display: none;
 }
 
 .manumain .logo {
-	position: absolute;
-	left: 10px;
-	top: 5px;
+    position: absolute;
+    left: 10px;
+    top: 5px;
 }
 
 .manumain .logo img {
-	height:45px; margin-top:3px
+    height: 45px;
+    margin-top: 3px
 }
 
 .overlapblackbg {
-	display: none;
+    display: none;
 }
 
 .wsmenu {
-	position: relative;
-	z-index: 99;	
-	color: #333;
-	font-weight: 400;
-	text-transform: uppercase;
-	display: none;
+    position: relative;
+    z-index: 99;
+    color: #333;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: none;
 }
 
-.wsmenu button{
+.wsmenu button {
     background-color: #333;
     color: #d1090b;
     position: fixed;
     width: 20px;
     height: 20px;
     font-size: 20px;
-    margin-left: 195px;     
+    margin-left: 195px;
 }
 
 @media screen and (max-width:1024px) {
-    html, body{
+    html, body {
         background: none;
         overflow-x: hidden;
     }
-
     body {
         font-size: 15px;
         line-height: 22px
     }
-
-    .header{
+    .header {
         display: none;
     }
-
     .wrapper {
         width: 100%;
         margin: 0 auto
     }
-
     .container {
         padding-top: 25px
     }
-
-    #input{
+    #input {
         width: 100%;
         margin-top: auto;
         margin-bottom: auto;
     }
-
-    .nav-footer,
-    footer,
-    footer .right {
+    .nav-footer, footer, footer .right {
         text-align: center
     }
-
     #nav {
         padding-top: 60px;
     }
-
     #nav .menu-primary {
         float: none;
         background: 0 0;
@@ -795,31 +756,26 @@ img:hover {
         font-family: Time New Roman;
         font-weight: bold;
     }
-
     #nav .menu-primary li {
         float: none;
         position: relative;
         background: 0 0;
         display: block;
     }
-
     #nav .menu-primary li a {
         line-height: 35px!important;
         padding: 0 0 0 10px;
         text-align: left;
         color: white;
     }
-
     #nav .menu-primary li a:hover {
         color: red;
     }
-
     .search-social {
         margin-top: 12px;
         float: none;
         margin-right: 0
     }
-
     .searchbox {
         width: 220px;
         position: relative;
@@ -827,17 +783,14 @@ img:hover {
         margin-left: 10px;
         margin-right: 0
     }
-
     .searchbox input[type=text] {
         padding-left: 7px;
         float: left;
         margin: 0 auto
     }
-
     .nav-footer li {
         margin-right: 10px
     }
-
     .searchbox i {
         float: left;
         border: none;
@@ -845,55 +798,43 @@ img:hover {
         margin-left: 3px;
         line-height: 29px
     }
-
     .newstop {
         margin-bottom: 20px;
         overflow: hidden
     }
-
     .newstop .blockLeft {
         width: 100%;
         float: none
     }
-
     .newstop .blockRight {
         width: 100%;
         float: none;
         margin-bottom: 1%;
         overflow: hidden
     }
-
     .newstop .bxone .block_wrap {
         padding-right: 0
     }
-
-    .primary,
-    .secondary {
+    .primary, .secondary {
         float: none;
         width: 100%
     }
-
     footer {
         padding: 42px 3% 20px
     }
-
     footer .left {
         float: none
     }
-
     footer .right, footer #div-right, footer .f-icon .icon.t, footer .f-icon .icon.f, footer .f-icon .icon.g {
         float: none;
         margin-top: 3%
     }
-
     footer .f-icon .icon.t, footer .f-icon .icon.f, footer .f-icon .icon.g {
         display: inline-flex;
     }
-
     footer .right img {
         width: 200px
     }
-
     .nav-footer li {
         float: none;
         padding-right: 10px;
@@ -901,28 +842,22 @@ img:hover {
         list-style-type: none;
         display: inline-block
     }
-
     .nav-footer>li:last-child {
         border-right: none
     }
-
-    .nav-footer>li a:hover,
-    .nav-footer>li.active a {
+    .nav-footer>li a:hover, .nav-footer>li.active a {
         color: #ec91ff
     }
-
     .nav-footer li a {
         color: #707070;
         font-size: 13px;
         text-decoration: none
     }
-
     .manumain {
         display: block;
-        position: fixed; 
-        top:0
+        position: fixed;
+        top: 0
     }
-    
     .overlapblackbg {
         left: 0;
         z-index: 100;
@@ -934,11 +869,9 @@ img:hover {
         background-color: #333;
         cursor: pointer;
     }
-    
     .overlapblackbg.menuopen {
         display: block;
     }
-    
     .wsmenu {
         position: relative;
         width: 0px;
@@ -952,11 +885,9 @@ img:hover {
         width: 240px;
         overflow-y: auto;
     }
-    
     .wsmenucontent {
         z-index: 1;
     }
-    
     .animated-arrow {
         cursor: pointer;
         padding: 30px 20px 10px 20px;
@@ -976,11 +907,9 @@ img:hover {
         display: block;
         content: '';
     }
-    
     .animated-arrow span:before {
         top: -7px;
     }
-    
     .animated-arrow span:after {
         bottom: -7px;
     }
@@ -991,27 +920,22 @@ img:hover {
         font-size: 14px;
         line-height: 22px
     }
-    
-    html, body{
+    html, body {
         background: none;
         overflow-x: hidden;
     }
-
     #input {
         width: 100%;
         height: 110px;
         margin-top: 200px;
     }
-    
-    ul{
+    ul {
         padding-inline-start: 0px;
     }
-
-    .postimg li{
+    .postimg li {
         width: 100%;
         float: none;
     }
-
 }
 
 @media screen and (max-width:580px) {
@@ -1019,51 +943,41 @@ img:hover {
         font-size: 13px;
         line-height: 20px
     }
-
     #input {
         width: 100%;
         height: 110px;
         margin-top: 200px;
     }
-
     #circle {
-        left:65%;
+        left: 65%;
     }
-
     .widget-title span {
         padding: 6px 10px;
         font-size: 14px
     }
-    
     .featured_posts .first-post {
         float: none;
         width: 100%;
         margin-bottom: 20px
     }
-
     .widget-title .linktabs {
         padding-top: 5px;
         padding-right: 0
     }
-
     .widget-title .linktabs a {
         font-size: 12px;
         color: #666;
         padding: 0 3px;
         font-weight: 300
     }
-
-    .newstop .bxfour .block_wrap h3,
-    .newstop .bxthree .block_wrap {
+    .newstop .bxfour .block_wrap h3, .newstop .bxthree .block_wrap {
         font-size: 12px;
         line-height: 15px
     }
-
     .newstop .block_wrap h3 {
         font-weight: 400;
         margin: 0
     }
-
     .newstop .block_wrap .cate {
         background-color: #df0000;
         font-size: 10px;
@@ -1073,14 +987,11 @@ img:hover {
         margin-bottom: 2%;
         line-height: 10px
     }
-
     .single-article .entry-title a {
         font-size: 16px
     }
-
     .blockrows {
         overflow: hidden;
         margin-bottom: 0
     }
 }
-
